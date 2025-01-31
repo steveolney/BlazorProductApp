@@ -1,0 +1,19 @@
+﻿@page "/"
+
+<h3>Multiply Two Numbers</h3>
+
+<label>Value 1: <input @bind="dValue1" type="number" /></label>
+<label>Value 2: <input @bind="dValue2" type="number" /></label>
+
+<button @onclick="Calculate">Calculate</button>
+
+<p>Product: @dProduct</p>
+
+@code {
+    private double dValue1, dValue2, dProduct;
+
+    private void Calculate()
+    {
+        dProduct = dValue1 * dValue2;
+    }
+}
